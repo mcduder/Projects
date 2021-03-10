@@ -43,4 +43,6 @@ nosetests.xml
 # Clang debug file
 *.dSYM
 
+main
+
 .DS_Store
