@@ -38,4 +38,9 @@ nosetests.xml
 .komodotools/
 *.komodoproject
 
+.vscode
+
+# Clang debug file
+*.dSYM
+
 .DS_Store
