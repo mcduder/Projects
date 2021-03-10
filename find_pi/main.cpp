@@ -30,8 +30,17 @@ int main() {
 
     // long double pi = 10000 * sin(180/10000);
 
-    cout << "How many digits of PI would you like to find:" << endl;
-    cin >> digit;
+    do {
+        cout << "How many digits of PI would you like to find:" << endl;
+        cin >> digit;
+
+        if(cin.fail() || digit <= 0) {
+            cout << "Error invalid input. Please retry" << endl;
+            cin.clear();
+            cin.ignore(100, '\n');
+            digit = 0;
+        }
+    } while (digit <= 0);
 
     for(int i = 0; i <= digit; i++) {
         numerator = pow(-1, i) * get_factorial(6*i) * (13591409+545140134*i);
